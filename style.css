@@ -1,0 +1,93 @@
+/* RESET & BASE */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: 'Segoe UI', sans-serif; background: #dad8d2; color: #333; }
+a { text-decoration: none; color: inherit; }
+ul { list-style: none; }
+
+/* NAV */
+nav { display: flex; justify-content: space-between; align-items: center; padding: 1rem 2rem; background: #e4e28a; }
+nav h1 { color: #fff; font-size: 1.8rem; }
+nav ul { display: flex; gap: 1rem; }
+nav a { padding: 0.5rem 1rem; color: #fff; font-weight: bold; border-radius: 5px; }
+nav a.active, nav a:hover { background: #fff; color: #b34d2f; }
+
+/* HERO */
+.hero { padding: 4rem 2rem; background: url('E1055WYP.avif') no-repeat center/cover; text-align: center; color: #fff; }
+.small-hero { height: 40vh; display: flex; flex-direction: column; justify-content: center; }
+
+/* MENU GRID */
+.menu-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 2rem; padding: 2rem; }
+.card { background: #fff0dc; padding: 1rem; border-radius: 10px; text-align: center; box-shadow: 0 2px 8px rgba(0,0,0,0.1); }
+.card img { width: 100%; height: 180px; object-fit: cover; border-radius: 8px; }
+.card h3 { margin-top: 0.5rem; }
+.card p { margin: 0.5rem 0; }
+.card button { background: #fadd88; padding: 0.5rem 1.5rem; border: none; border-radius: 5px; font-weight: bold; cursor: pointer; }
+.card button:hover { background: #ffd67b; }
+
+/* ABOUT */
+.about-us { padding: 4rem 2rem; background-color: #fffef8; }
+.about-content { display: flex; flex-wrap: wrap; gap: 2rem; align-items: center; justify-content: center; }
+.about-text { flex: 1 1 300px; max-width: 600px; }
+.about-text h2 { color: #b34d2f; margin-bottom: 1rem; }
+.about-text p { margin-bottom: 1rem; line-height: 1.6; }
+.about-image { flex: 1 1 300px; }
+.about-image img { width: 100%; border-radius: 10px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); }
+
+/* REVIEWS */
+.reviews { padding: 4rem 2rem; background-color: #f8f2e4; }
+.reviews h2 { text-align: center; color: #b34d2f; margin-bottom: 2rem; }
+.review-box { background: #fff; padding: 1rem 1.5rem; margin: 1rem auto; max-width: 600px; border-left: 5px solid #e4b34d; border-radius: 5px; box-shadow: 0 2px 6px rgba(0,0,0,0.05); }
+
+/* ORDER PAGE */
+.order-form { padding: 3rem 2rem; max-width: 600px; margin: auto; }
+.preview { text-align: center; margin-bottom: 2rem; }
+.preview img { width: 300px; border-radius: 10px; margin-bottom: 1rem; }
+.form-group { margin-bottom: 1.2rem; }
+.form-group label { display: block; margin-bottom: 0.5rem; font-weight: bold; }
+.form-group input, .form-group textarea { width: 100%; padding: 0.5rem; border-radius: 5px; border: 1px solid #ccc; }
+.btn { background: #e4b34d; padding: 0.7rem 2rem; border: none; border-radius: 5px; color: #fff; font-weight: bold; cursor: pointer; }
+.btn:hover { background: #ffd67b; }
+
+/* FOOTER */
+footer { text-align: center; padding: 1.5rem; background: #e4b34d; color: #fff; margin-top: 2rem; }
+
+.fade-in {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.8s ease-out;
+}
+.fade-in.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+.card button:hover {
+  transform: scale(1.05);
+  transition: transform 0.3s ease;
+}
+.card img {
+  transition: transform 0.3s ease;
+}
+.card img:hover {
+  transform: scale(1.05);
+}
+nav {
+  transform: translateY(-100%);
+  animation: slideDown 0.6s ease forwards;
+}
+@keyframes slideDown {
+  to {
+    transform: translateY(0);
+  }
+}
+#confirmation {
+  opacity: 0;
+  transition: opacity 0.8s ease-in;
+}
+#confirmation.show {
+  opacity: 1;
+  color: green;
+  font-weight: bold;
+  margin-top: 1rem;
+}
+
+

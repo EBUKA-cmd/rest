@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Delizio Restaurant</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    #preloader {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background: #fffef8;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 1000;
+    }
+    #preloader img {
+      width: 150px;
+      animation: pulse 1.5s infinite;
+    }
+    @keyframes pulse {
+      0% { transform: scale(1); opacity: 1; }
+      50% { transform: scale(1.1); opacity: 0.7; }
+      100% { transform: scale(1); opacity: 1; }
+    }
+  </style>
+</head>
+<body>
+  <div id="preloader">
+    <img src="download.webp" alt="Loading...">
+  </div>
+
+  <header>
+    <nav>
+      <h1>Delizio</h1>
+      <ul>
+        <li><a href="index.html" class="active">Menu</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#reviews">Reviews</a></li>
+        <li><a href="order.html">Order</a></li>
+      </ul>
+    </nav>
+    <div class="hero small-hero">
+      <h2>Our Signature Dishes</h2>
+      <p>Tap your favorite to order now</p>
+    </div>
+  </header>
+
+  <section class="menu-grid fade-in">
+    <div class="card">
+      <img src="download (01).jpg" alt="Grilled Chicken">
+      <h3>Grilled Chicken</h3>
+      <p>₦4000</p>
+      <button onclick="goToOrder('Grilled Chicken', 4000, 'download (01).jpg')">Order Now</button>
+    </div>
+    <div class="card">
+      <img src="download (02).jpg" alt="Pasta Delight">
+      <h3>Pasta Delight</h3>
+      <p>₦3500</p>
+      <button onclick="goToOrder('Pasta Delight', 3500, 'download (02).jpg')">Order Now</button>
+    </div>
+    <div class="card">
+      <img src="download (2).jpg" alt="Fruit Tart">
+      <h3>Fruit Tart</h3>
+      <p>₦2500</p>
+      <button onclick="goToOrder('Fruit Tart', 2500, 'download (2).jpg')">Order Now</button>
+    </div>
+    <div class="card">
+      <img src="download (3).jpg" alt="Jollof Rice & Turkey">
+      <h3>Jollof Rice & Turkey</h3>
+      <p>₦3000</p>
+      <button onclick="goToOrder('Jollof Rice & Turkey', 3000, 'download (3).jpg')">Order Now</button>
+    </div>
+    <div class="card">
+      <img src="download (4).jpg" alt="Creamy Alfredo Pasta">
+      <h3>Creamy Alfredo Pasta</h3>
+      <p>₦3800</p>
+      <button onclick="goToOrder('Creamy Alfredo Pasta', 3800, 'download (4).jpg')">Order Now</button>
+    </div>
+    <div class="card">
+      <img src="download (5).jpg" alt="Spicy Suya Platter">
+      <h3>Spicy Suya Platter</h3>
+      <p>₦3200</p>
+      <button onclick="goToOrder('Spicy Suya Platter', 3200, 'download (5).jpg')">Order Now</button>
+    </div>
+    <div class="card">
+      <img src="download (6).jpg" alt="BBQ Ribs & Fries">
+      <h3>BBQ Ribs & Fries</h3>
+      <p>₦4500</p>
+      <button onclick="goToOrder('BBQ Ribs & Fries', 4500, 'download (6).jpg')">Order Now</button>
+    </div>
+    <div class="card">
+      <img src="download (7).jpg" alt="Veggie Stir-Fry Noodles">
+      <h3>Veggie Stir-Fry Noodles</h3>
+      <p>₦2800</p>
+      <button onclick="goToOrder('Veggie Stir-Fry Noodles', 2800, 'download (7).jpg')">Order Now</button>
+    </div>
+    <div class="card">
+      <img src="download (8).jpg" alt="Pepper Soup (Goat Meat)">
+      <h3>Pepper Soup (Goat Meat)</h3>
+      <p>₦3700</p>
+      <button onclick="goToOrder('Pepper Soup (Goat Meat)', 3700, 'download (8).jpg')">Order Now</button>
+    </div>
+    <div class="card">
+      <img src="download (9).jpg" alt="Seafood Platter">
+      <h3>Seafood Platter</h3>
+      <p>₦5500</p>
+      <button onclick="goToOrder('Seafood Platter', 5500, 'download (9).jpg')">Order Now</button>
+    </div>
+    <div class="card">
+      <img src="download (10).jpg" alt="Chocolate Lava Cake">
+      <h3>Chocolate Lava Cake</h3>
+      <p>₦2200</p>
+      <button onclick="goToOrder('Chocolate Lava Cake', 2200, 'download (10).jpg')">Order Now</button>
+    </div>
+    <div class="card">
+      <img src="download (11).jpg" alt="Zobo Mocktail Drink">
+      <h3>Zobo Mocktail Drink</h3>
+      <p>₦1200</p>
+      <button onclick="goToOrder('Zobo Mocktail Drink', 1200, 'download (11).jpg')">Order Now</button>
+    </div>
+    <div class="card">
+      <img src="download (12).jpg" alt="Chicken Shawarma Wrap">
+      <h3>Chicken Shawarma Wrap</h3>
+      <p>₦2500</p>
+      <button onclick="goToOrder('Chicken Shawarma Wrap', 2500, 'download (12).jpg')">Order Now</button>
+    </div>
+    <div class="card">
+      <img src="download (13).jpg" alt="Pounded Yam & Egusi Soup">
+      <h3>Pounded Yam & Egusi Soup</h3>
+      <p>₦3000</p>
+      <button onclick="goToOrder('Pounded Yam & Egusi Soup', 3000, 'download (13).jpg')">Order Now</button>
+    </div>
+    <div class="card">
+      <img src="download (17).jpg" alt="Pounded Yam & Egusi Soup">
+      <h3>Spaghetti Bolognese</h3>
+      <p>₦3000</p>
+      <button onclick="goToOrder('Spaghetti Bolognese', 3000, 'download (17).jpg')">Order Now</button>
+    </div>
+  </section>
+
+  <section class="about-us fade-in" id="about">
+    <div class="about-content">
+      <div class="about-text">
+        <h2>About Delizio</h2>
+        <p>At Delizio, we believe food is more than just fuel — it's an experience. Since 2020, our mission has been to serve delicious, freshly-prepared meals that warm the soul and delight the senses.</p>
+        <p>Whether you're craving comfort food or looking for a fine dining vibe, Delizio is your go-to spot. With every plate, we blend passion, culture, and love into every bite.</p>
+        <p>Come dine with us or order online — either way, you’re family here ❤️</p>
+      </div>
+      <div class="about-image">
+        <img src="about.jpg" alt="Our Restaurant" />
+      </div>
+    </div>
+  </section>
+
+  <section class="reviews fade-in" id="reviews">
+    <h2>Customer Reviews</h2>
+    <div class="review-box">
+      <p><strong>Sarah O.</strong> – “Absolutely delicious! The grilled chicken is to die for.”</p>
+    </div>
+    <div class="review-box">
+      <p><strong>James A.</strong> – “Great vibe, tasty food, and amazing service.”</p>
+    </div>
+    <div class="review-box">
+      <p><strong>Anita K.</strong> – “The pasta was creamy and rich. Would definitely order again.”</p>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Delizio Restaurant. All rights reserved.</p>
+  </footer>
+
+  <script>
+    // Hide preloader
+    window.addEventListener('load', function () {
+      const preloader = document.getElementById('preloader');
+      preloader.style.display = 'none';
+    });
+  </script>
+  <script src="script.js"></script>
+</body>
+</html>
